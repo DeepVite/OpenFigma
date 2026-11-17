@@ -16,8 +16,8 @@ import { checkTemplate, previewPrompt, type TemplateCheck } from '../engine'
 const CHECK_DELAY_MS = 250
 
 /**
- * One template prompt in Settings: the text shown, the person's own or OpenPencil's, what is
- * wrong with it, and how it reads filled with sample values. Text equal to OpenPencil's is saved
+ * One template prompt in Settings: the text shown, the person's own or OpenFigma's, what is
+ * wrong with it, and how it reads filled with sample values. Text equal to OpenFigma's is saved
  * as no change, so a later update to the built-in prompt still reaches it.
  */
 export function useTemplatePromptSetting(id: TemplatePrompt) {
@@ -57,7 +57,7 @@ export function useTemplatePromptSetting(id: TemplatePrompt) {
   }
 }
 
-/** The Design prompt in Settings: the person's instructions, and whether they replace OpenPencil's. */
+/** The Design prompt in Settings: the person's instructions, and whether they replace OpenFigma's. */
 export function useDesignPromptSetting() {
   const defaults = DEFAULT_APP_PREFERENCES.prompts.design
   const design = computed(() => appPreferences.value.prompts.design)
@@ -78,7 +78,7 @@ export function useDesignPromptSetting() {
     mode,
     modified,
     builtIn: BUILT_IN_DESIGN_PROMPT,
-    /** Puts OpenPencil's instructions in the field, to edit rather than start empty. */
+    /** Puts OpenFigma's instructions in the field, to edit rather than start empty. */
     startFromBuiltIn: () => {
       text.value = BUILT_IN_DESIGN_PROMPT
     },

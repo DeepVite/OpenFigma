@@ -23,7 +23,7 @@ export class CloudBillingError extends Error {
     readonly status: number,
     readonly code?: BillingErrorCode
   ) {
-    super(`OpenPencil billing request failed with HTTP ${status}`)
+    super(`OpenFigma billing request failed with HTTP ${status}`)
   }
 }
 

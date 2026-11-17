@@ -19,7 +19,7 @@ export const DECORATIONS = new Set<TextDecoration>(['NONE', 'UNDERLINE', 'STRIKE
 export const DECORATION_STYLES = new Set<TextDecorationStyle>(['SOLID', 'DOTTED', 'WAVY'])
 const LENGTH_UNITS = ['PIXELS', 'PERCENT'] as const
 const TEXT_CASES = ['ORIGINAL', 'UPPER', 'LOWER', 'TITLE'] as const
-/** Text cases Figma takes that OpenPencil cannot draw yet. */
+/** Text cases Figma takes that OpenFigma cannot draw yet. */
 const SMALL_CAPS = ['SMALL_CAPS', 'SMALL_CAPS_FORCED'] as const
 
 /** A length in pixels for a font size: a percent is of the size of the characters it styles. */
@@ -95,11 +95,11 @@ export function decorationColorFills(method: string, value: unknown): Fill[] {
   return color === 'AUTO' ? [] : parseFigmaPaints([color], method, 'textDecorationColor')
 }
 
-/** A text case Figma takes; it takes small caps too, which OpenPencil cannot draw yet. */
+/** A text case Figma takes; it takes small caps too, which OpenFigma cannot draw yet. */
 export function textCaseValue(method: string, value: unknown, property = 'value'): TextCase {
   const textCase = parseFigma(v.picklist([...TEXT_CASES, ...SMALL_CAPS]), value, method, property)
   if (textCase === 'SMALL_CAPS' || textCase === 'SMALL_CAPS_FORCED') {
-    throw new Error(`in ${method}: OpenPencil does not support the ${textCase} text case`)
+    throw new Error(`in ${method}: OpenFigma does not support the ${textCase} text case`)
   }
   return textCase
 }

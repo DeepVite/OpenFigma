@@ -20,7 +20,7 @@ export type DiscoverCloudOptions = {
 
 /**
  * Why a server could not be used: the address is not a web address, nothing answered, something
- * answered but not as OpenPencil Cloud, the server is older than this editor supports, or this
+ * answered but not as OpenFigma Cloud, the server is older than this editor supports, or this
  * editor is older than the server supports.
  */
 export type CloudDiscoveryFailure =
@@ -49,11 +49,11 @@ function discoveryURL(serverURL: string): URL {
   try {
     url = new URL(serverURL)
   } catch (error) {
-    throw new CloudClientError('OpenPencil server URL is invalid', error, 'invalid-address')
+    throw new CloudClientError('OpenFigma server URL is invalid', error, 'invalid-address')
   }
   if (url.protocol !== 'https:' && url.protocol !== 'http:') {
     throw new CloudClientError(
-      'OpenPencil server URL must use HTTP or HTTPS',
+      'OpenFigma server URL must use HTTP or HTTPS',
       undefined,
       'invalid-address'
     )
@@ -73,14 +73,14 @@ function protocolMismatch(version: string): CloudDiscoveryFailure | null {
 function parseDiscoveryBody(text: string, editorVersion: string | undefined): CloudDiscovery {
   const body = v.safeParse(discoveryBodySchema, text)
   if (!body.success) {
-    throw new CloudClientError('OpenPencil server discovery is not JSON', body.issues, 'not-cloud')
+    throw new CloudClientError('OpenFigma server discovery is not JSON', body.issues, 'not-cloud')
   }
   const discovery = v.safeParse(cloudDiscoverySchema, body.output)
   if (discovery.success) {
     const minimum = discovery.output.minimumEditorVersion
     if (minimum && editorVersion && !isEditorVersionAtLeast(editorVersion, minimum)) {
       throw new CloudClientError(
-        `OpenPencil server needs editor ${minimum} or later`,
+        `OpenFigma server needs editor ${minimum} or later`,
         undefined,
         'editor-outdated'
       )
@@ -92,8 +92,8 @@ function parseDiscoveryBody(text: string, editorVersion: string | undefined): Cl
   const mismatch = version === null ? null : protocolMismatch(version)
   throw new CloudClientError(
     mismatch
-      ? `OpenPencil server speaks protocol ${version}`
-      : 'OpenPencil server discovery is invalid',
+      ? `OpenFigma server speaks protocol ${version}`
+      : 'OpenFigma server discovery is invalid',
     discovery.issues,
     mismatch ?? 'not-cloud'
   )
@@ -115,7 +115,7 @@ export async function discoverCloud(
     })
     if (!response.ok) {
       throw new CloudClientError(
-        `OpenPencil server discovery failed with HTTP ${response.status}`,
+        `OpenFigma server discovery failed with HTTP ${response.status}`,
         undefined,
         response.status >= 500 ? 'unreachable' : 'not-cloud'
       )
@@ -124,8 +124,8 @@ export async function discoverCloud(
   } catch (error) {
     if (error instanceof CloudClientError) throw error
     if (signal.aborted) {
-      throw new CloudClientError('OpenPencil server discovery was cancelled or timed out', error)
+      throw new CloudClientError('OpenFigma server discovery was cancelled or timed out', error)
     }
-    throw new CloudClientError('OpenPencil server discovery failed', error)
+    throw new CloudClientError('OpenFigma server discovery failed', error)
   }
 }

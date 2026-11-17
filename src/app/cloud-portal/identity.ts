@@ -10,7 +10,7 @@ import { usePortal } from './context'
 export type SiteLinkTarget = { label: string; href: string; external?: boolean }
 
 /**
- * Who a Cloud server's public pages speak for. The official server is OpenPencil's own site; a
+ * Who a Cloud server's public pages speak for. The official server is OpenFigma's own site; a
  * self-hosted one is its operator's, named by `[deployment.branding]` or else its address, with
  * the operator's help and legal links.
  */
@@ -34,9 +34,9 @@ export function useSiteIdentity() {
 
   return {
     official,
-    name: official ? 'OpenPencil' : (branding?.name ?? portal.host),
+    name: official ? 'OpenFigma' : (branding?.name ?? portal.host),
     logoURL: official ? undefined : branding?.logoURL,
-    /** Where help is: the operator's page, or OpenPencil's documentation. */
+    /** Where help is: the operator's page, or OpenFigma's documentation. */
     helpURL: (official ? undefined : branding?.helpURL) ?? DOCS_URL,
     /** Whether the operator named a help page of their own. */
     ownHelp: !official && branding?.helpURL !== undefined,

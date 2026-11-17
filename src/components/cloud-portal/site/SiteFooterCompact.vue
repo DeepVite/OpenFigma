@@ -39,7 +39,7 @@ const operatorLinks = computed<SiteLinkTarget[]>(() => [
           {{ link.label }}
         </SiteLink>
       </nav>
-      <nav :class="ui.line()" aria-label="OpenPencil">
+      <nav :class="ui.line()" aria-label="OpenFigma">
         <SiteLink :href="DOCS_URL" external>
           <span :class="ui.poweredBy()">
             <BrandMark variant="micro" decorative :class="ui.poweredMark()" />

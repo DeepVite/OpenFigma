@@ -44,7 +44,7 @@ const router = useRouter()
 const dir = useInterfaceDirection()
 
 useHead({
-  titleTemplate: (title) => (title ? `${title} — OpenPencil` : 'OpenPencil'),
+  titleTemplate: (title) => (title ? `${title} — OpenFigma` : 'OpenFigma'),
   htmlAttrs: {
     lang: locale,
     dir,

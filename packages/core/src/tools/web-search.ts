@@ -67,7 +67,7 @@ export const webSearch = defineTool({
       return {
         error:
           'Web search is not set up. Ask the user to add an Exa key in Settings › Integrations, ' +
-          'or to use an OpenPencil Cloud model whose plan includes search.'
+          'or to use an OpenFigma Cloud model whose plan includes search.'
       }
     }
     try {

@@ -35,7 +35,7 @@ export function renderPagesToPDF(
   specs: readonly PDFPageSpec[],
   options: PDFExportOptions = {}
 ): PDFExportResult | null {
-  const doc = new renderer.ck.PDFDocument(options.title ?? '', 'OpenPencil', PDF_RASTER_DPI)
+  const doc = new renderer.ck.PDFDocument(options.title ?? '', 'OpenFigma', PDF_RASTER_DPI)
   try {
     const pages = specs.flatMap((spec) => drawPage(doc, renderer, graph, spec) ?? [])
     if (pages.length === 0) {

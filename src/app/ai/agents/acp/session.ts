@@ -76,7 +76,7 @@ function sessionModel(response: OfferedSessionOptions): string | null {
 /** The agent offers no choice of model, so a session cannot run the one a profile names. */
 export class AgentModelChoiceError extends Error {
   constructor(agentDef: ACPAgentDef) {
-    super(`${agentDef.name} does not let OpenPencil choose its model.`)
+    super(`${agentDef.name} does not let OpenFigma choose its model.`)
     this.name = 'AgentModelChoiceError'
   }
 }
@@ -84,7 +84,7 @@ export class AgentModelChoiceError extends Error {
 /** The session's model offers no choice of effort, so it cannot run the one a profile names. */
 export class AgentEffortChoiceError extends Error {
   constructor(agentDef: ACPAgentDef) {
-    super(`${agentDef.name} does not let OpenPencil choose this model's effort.`)
+    super(`${agentDef.name} does not let OpenFigma choose this model's effort.`)
     this.name = 'AgentEffortChoiceError'
   }
 }
@@ -166,7 +166,7 @@ export function isMissingCommandError(message: string): boolean {
 function missingCommandMessage(agentDef?: ACPAgentDef): string {
   if (!agentDef) return 'ACP agent CLI is not installed.'
   if (!agentDef.installCommand) {
-    return `"${agentDef.command}" is not installed. Install it and restart OpenPencil.`
+    return `"${agentDef.command}" is not installed. Install it and restart OpenFigma.`
   }
   return `"${agentDef.command}" is not installed. Install it with: ${agentDef.installCommand}`
 }
@@ -192,7 +192,7 @@ export function formatConnectionError(e: unknown, agentDef?: ACPAgentDef): strin
   return msg
 }
 
-/** The ACP agent a provider runs, when OpenPencil continues that agent's saved sessions. */
+/** The ACP agent a provider runs, when OpenFigma continues that agent's saved sessions. */
 export function resumingAgent(providerID: AIProviderID): ACPAgentID | null {
   const agent = acpAgentFor(providerID)
   return agent?.resumesSessions ? agent.id : null

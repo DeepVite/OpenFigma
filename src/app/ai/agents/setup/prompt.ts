@@ -25,7 +25,7 @@ export function codingAgentGuideURL(agentID: ACPAgentID): string {
 
 /**
  * Markdown to paste into a coding agent the person already uses, asking it to install what
- * OpenPencil needs to start it. Written for the agent, so it stays in English.
+ * OpenFigma needs to start it. Written for the agent, so it stays in English.
  */
 export function codingAgentSetupPrompt(
   agentID: ACPAgentID,
@@ -39,17 +39,17 @@ export function codingAgentSetupPrompt(
     ? `install it: \`${command}\``
     : `install ${agent.name} from ${agent.setupURL}`
   return dedent`
-    Help me connect ${agent.name} to OpenPencil, an open-source design editor. OpenPencil starts ${agent.name} through the Agent Client Protocol and gives it canvas tools through OpenPencil's local MCP server, so both need to be installed on this computer.
+    Help me connect ${agent.name} to OpenFigma, an open-source design editor. OpenFigma starts ${agent.name} through the Agent Client Protocol and gives it canvas tools through OpenFigma's local MCP server, so both need to be installed on this computer.
 
     Please do this for me:
 
     1. If \`${agent.command}\` is not on my PATH, ${install}
-    2. If \`openpencil-mcp-http\` is not on my PATH, install OpenPencil's MCP server: \`${MCP_INSTALL_COMMAND}\`
+    2. If \`openpencil-mcp-http\` is not on my PATH, install OpenFigma's MCP server: \`${MCP_INSTALL_COMMAND}\`
     3. If npm fails with a permission error (EACCES), set up a global npm folder in my home directory (for example \`npm config set prefix ~/.npm-global\` and add \`~/.npm-global/bin\` to my PATH) and install again; use sudo only if I agree.
     4. Confirm both commands are found, for example with \`which ${agent.command}\` and \`which openpencil-mcp-http\` (\`where\` on Windows). If a global npm folder is missing from my PATH, tell me how to add it.
     5. ${SIGN_IN[agentID]}
 
-    Then tell me what you installed and anything I still need to do myself. I will press "Check again" in OpenPencil's AI setup afterwards.
+    Then tell me what you installed and anything I still need to do myself. I will press "Check again" in OpenFigma's AI setup afterwards.
 
     Setup guide: ${codingAgentGuideURL(agentID)}
   `

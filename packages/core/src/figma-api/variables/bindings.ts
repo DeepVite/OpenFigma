@@ -188,7 +188,7 @@ const LAYER_TEXT_FIELDS: ReadonlySet<TextBindableField> = new Set([
 
 /**
  * Binds a text style field of text with no characters on the layer, as Figma keeps it for the
- * characters typed later. OpenPencil keeps only some of those fields on a layer.
+ * characters typed later. OpenFigma keeps only some of those fields on a layer.
  */
 export function setEmptyTextBinding(
   graph: SceneGraph,
@@ -198,7 +198,7 @@ export function setEmptyTextBinding(
 ): void {
   if (!LAYER_TEXT_FIELDS.has(field)) {
     throw new Error(
-      `in setBoundVariable: OpenPencil binds ${field} only on text that has characters`
+      `in setBoundVariable: OpenFigma binds ${field} only on text that has characters`
     )
   }
   if (variable) graph.bindVariable(node.id, field, variable.id)

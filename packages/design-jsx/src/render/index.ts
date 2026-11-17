@@ -161,7 +161,7 @@ async function renderJSX<Artwork>(
 
 /**
  * A Design JSX renderer bound to an engine. Rendering needs `services` for icons, inline
- * SVG, and layout; OpenPencil's engine provides them through `@open-pencil/core/design-jsx`.
+ * SVG, and layout; OpenFigma's engine provides them through `@open-pencil/core/design-jsx`.
  */
 export function createDesignJSXRenderer<Artwork>(services: DesignJSXServices<Artwork>) {
   return {

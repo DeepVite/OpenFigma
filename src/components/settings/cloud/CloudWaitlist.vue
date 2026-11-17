@@ -14,7 +14,7 @@ import { CLOUD_WAITLIST_URL, IS_TAURI } from '@/constants'
 import { cloudServers } from './ui'
 
 /**
- * The hosted OpenPencil Cloud before it opens: its waitlist, in place of connecting to it. The web
+ * The hosted OpenFigma Cloud before it opens: its waitlist, in place of connecting to it. The web
  * app signs up here; the desktop app opens the website, since Turnstile runs only on the sites
  * the service accepts.
  */

@@ -112,7 +112,7 @@ export function reviewTarget(
 
 function toolNamed(name: string) {
   const def = ALL_TOOLS.find((tool) => tool.name === name)
-  if (!def) throw new Error(`OpenPencil has no ${name} tool`)
+  if (!def) throw new Error(`OpenFigma has no ${name} tool`)
   return def
 }
 

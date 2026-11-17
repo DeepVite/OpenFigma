@@ -16,7 +16,7 @@ export interface AgentSetupState {
   checked: boolean
   scanning: boolean
   detected: DetectedAgent | null
-  /** OpenPencil's MCP server, through which agents reach the canvas. */
+  /** OpenFigma's MCP server, through which agents reach the canvas. */
   bridge: boolean
   /** The installed MCP server does not match this app's version. */
   bridgeOutdated: boolean
@@ -60,14 +60,14 @@ export interface PiSetupState {
   bridgeInstallable?: boolean
   installingCompanion: boolean
   installingBridge: boolean
-  /** The default model set in Pi, used unless OpenPencil names another. */
+  /** The default model set in Pi, used unless OpenFigma names another. */
   defaultModel: string | null
   /** Pi keeps sign-ins; null until read or where they cannot be read. */
   signedIn?: boolean | null
   error: DiscoveryError | null
 }
 
-/** What setup knows about OpenPencil's MCP server on its own, for Settings → MCP. */
+/** What setup knows about OpenFigma's MCP server on its own, for Settings → MCP. */
 export type MCPServerSetupState = Pick<
   AgentSetupState,
   | 'supported'
@@ -82,7 +82,7 @@ export type MCPServerSetupState = Pick<
   | 'error'
 >
 
-/** An OpenPencil companion as setup presents it, with the one-click fix that applies. */
+/** An OpenFigma companion as setup presents it, with the one-click fix that applies. */
 export interface CompanionCheck {
   /** Installed and matching this app. */
   ready: boolean
@@ -167,7 +167,7 @@ export interface AgentAccountView {
   acceptsCode: boolean
   error: AgentAccount['error']
   /**
-   * Whether a signed-in agent's session reached OpenPencil's tools, with the agent's reason when
+   * Whether a signed-in agent's session reached OpenFigma's tools, with the agent's reason when
    * it did not; null when signed out or when the MCP server cannot report it.
    */
   tools: { state: 'checking' | 'connected' | 'unreachable'; reason: string | null } | null

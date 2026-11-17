@@ -33,7 +33,7 @@ export function registerWebMCPTools(
         await context.registerTool(
           {
             name: def.name,
-            description: `${def.description} Targets the active OpenPencil document.`,
+            description: `${def.description} Targets the active OpenFigma document.`,
             inputSchema: toolJSONSchema(schema, { typeMode: 'input' }),
             annotations: { readOnlyHint: !def.mutates, untrustedContentHint: true },
             execute: async (input, options?: WebMCP.ToolExecuteCallbackOptions) => {

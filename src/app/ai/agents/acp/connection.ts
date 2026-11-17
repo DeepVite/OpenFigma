@@ -111,7 +111,7 @@ export interface AgentConnection {
 }
 
 /**
- * Finds the agent, starts its process, and connects to it: the one way OpenPencil starts an ACP
+ * Finds the agent, starts its process, and connects to it: the one way OpenFigma starts an ACP
  * agent, for a chat, a sign-in check, or one job. Finding and starting must finish within the
  * deadline and stop with `signal`; a process that starts after that is killed. The caller sends
  * `initialize` and whatever follows through `bounded` or `untilStopped`, and closes the agent.
@@ -171,7 +171,7 @@ export async function connectAgent(
   const { child, input, output } = process
   onProcess?.(child)
 
-  const connection = client({ name: 'OpenPencil' })
+  const connection = client({ name: 'OpenFigma' })
     .onRequest(
       methods.client.session.requestPermission,
       ({ params }) => requestPermission?.(params) ?? { outcome: { outcome: 'cancelled' } }

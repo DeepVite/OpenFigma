@@ -35,7 +35,7 @@ export type CloudRequestOptions = {
 function apiURL(baseURL: string): string {
   const url = new URL(baseURL)
   if (url.protocol !== 'https:' && url.protocol !== 'http:') {
-    throw new CloudAPIError('OpenPencil Cloud API URL must use HTTP or HTTPS', 0)
+    throw new CloudAPIError('OpenFigma Cloud API URL must use HTTP or HTTPS', 0)
   }
   url.pathname = url.pathname.replace(/\/$/, '')
   url.search = ''

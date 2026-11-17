@@ -32,7 +32,7 @@ export class CloudServiceError extends Error {
     readonly status: number,
     readonly code?: ServiceErrorCode
   ) {
-    super(`OpenPencil services request failed with HTTP ${status}`)
+    super(`OpenFigma services request failed with HTTP ${status}`)
   }
 }
 
@@ -41,7 +41,7 @@ export class CloudServiceInsecureEndpointError extends Error {
   override readonly name = 'CloudServiceInsecureEndpointError'
 
   constructor(readonly url: string) {
-    super('OpenPencil services and billing are reached only over HTTPS')
+    super('OpenFigma services and billing are reached only over HTTPS')
   }
 }
 

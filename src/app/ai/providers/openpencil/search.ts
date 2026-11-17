@@ -14,7 +14,7 @@ type SearchClient = (workspaceId: string) => Pick<CloudServicesClient, 'catalog'
 /** What the model is told when the service refuses a search, so it can tell the person. */
 const REFUSALS: Partial<Record<ServiceErrorCode, string>> = {
   insufficient_credits:
-    'The workspace is out of OpenPencil credits, so searches fail until they renew or more are added.',
+    'The workspace is out of OpenFigma credits, so searches fail until they renew or more are added.',
   rate_limited: 'Too many requests at once. Try again shortly.',
   capability_unavailable: "This Cloud's services do not offer web search."
 }
@@ -52,7 +52,7 @@ export async function cloudWebSearch(
   try {
     return (await services.catalog()).search ? provider : null
   } catch (error) {
-    console.warn('Could not read the OpenPencil services catalog', error)
+    console.warn('Could not read the OpenFigma services catalog', error)
     return provider
   }
 }

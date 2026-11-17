@@ -250,7 +250,7 @@ export function registerTools(mcpServer: McpServer, options: RegisterToolsOption
     'list_documents',
     {
       description:
-        'List open OpenPencil documents/tabs with their IDs, file paths, current pages, and pages.',
+        'List open OpenFigma documents/tabs with their IDs, file paths, current pages, and pages.',
       inputSchema: v.strictObject({})
     },
     async () => {
@@ -548,7 +548,7 @@ interface CallableTool {
 }
 
 const callToolInputSchema = v.strictObject({
-  toolName: v.pipe(v.string(), v.description('The OpenPencil tool, such as create_shape')),
+  toolName: v.pipe(v.string(), v.description('The OpenFigma tool, such as create_shape')),
   arguments: v.optional(
     v.pipe(v.record(v.string(), v.unknown()), v.description('The arguments its schema describes'))
   )
@@ -568,14 +568,14 @@ function registerCallTool(
     'call_mcp_tool',
     {
       description:
-        'Call an OpenPencil tool by name, with the arguments its schema describes. Use it for the OpenPencil tools that are not loaded as functions.',
+        'Call an OpenFigma tool by name, with the arguments its schema describes. Use it for the OpenFigma tools that are not loaded as functions.',
       inputSchema: toolInputSchema(callToolInputSchema),
       annotations: toolAnnotations('write')
     },
     async ({ toolName, arguments: args = {} }, context) => {
       try {
         const tool = callable.get(toolName)
-        if (!tool) return fail(new Error(`No OpenPencil tool named "${toolName}"`))
+        if (!tool) return fail(new Error(`No OpenFigma tool named "${toolName}"`))
         const parsed = v.safeParse(tool.input, args)
         if (!parsed.success) {
           return fail(

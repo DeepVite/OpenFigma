@@ -150,7 +150,7 @@ export function assertCompatibleMCPVersion(health: AutomationHealth): void {
   // The running server's own install command names its own version, so the fix always
   // comes from this app's version.
   throw new MCPStartupError(
-    `OpenPencil desktop v${APP_VERSION} requires ${MCP_PACKAGE_NAME} v${oursMajorMinor}.x ` +
+    `OpenFigma desktop v${APP_VERSION} requires ${MCP_PACKAGE_NAME} v${oursMajorMinor}.x ` +
       `(major.minor compatibility), but the running MCP server is ${runningVersion}. ` +
       `Run: ${MCP_INSTALL_COMMAND}, then restart the MCP server.`,
     mcpFailure('outdated', health.version)

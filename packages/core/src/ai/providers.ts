@@ -36,7 +36,7 @@ export interface ACPAgentDef {
   /**
    * Whether the agent holds back MCP tools past a total schema size and tells its model to call
    * them through a `call_mcp_tool` tool it does not provide over ACP, as Antigravity CLI does.
-   * OpenPencil's MCP server then provides that tool for the agent's sessions.
+   * OpenFigma's MCP server then provides that tool for the agent's sessions.
    */
   defersMCPTools?: boolean
 }
@@ -127,7 +127,7 @@ export type AIProviderID =
   | 'harness:pi'
   | `acp:${ACPAgentID}`
 
-/** How OpenPencil reaches a provider's models: its API, an ACP coding agent, or the Harness companion. */
+/** How OpenFigma reaches a provider's models: its API, an ACP coding agent, or the Harness companion. */
 export type AIProviderKind = 'api' | 'acp' | 'harness'
 
 /** The kind of a provider, which its ID's prefix names. */
@@ -433,7 +433,7 @@ export const AI_PROVIDERS: AIProviderDef[] = [
   },
   {
     id: 'openpencil',
-    name: 'OpenPencil Cloud',
+    name: 'OpenFigma Cloud',
     keyPlaceholder: '',
     keyURL: '',
     defaultModel: '',

@@ -14,7 +14,7 @@ import {
 import { boundEffectCopy, type FigmaEffect } from '#core/figma-api/effects'
 import type { FigmaRectangleNode } from '#core/figma-api/node-types'
 
-/** An effect as a layer's `effects` holds it, Figma's typings and OpenPencil's read-back alike. */
+/** An effect as a layer's `effects` holds it, Figma's typings and OpenFigma's read-back alike. */
 type FigmaNodeEffect = FigmaRectangleNode['effects'][number]
 
 import { FIGMA_DEFAULT_VALUES, variableAlias, type FigmaVariableAlias } from './values'
@@ -32,7 +32,7 @@ export {
   type FigmaBindableField
 } from './bindings'
 
-/** Figma's variable types, including the motion types OpenPencil does not model. */
+/** Figma's variable types, including the motion types OpenFigma does not model. */
 const FIGMA_TYPES = ['BOOLEAN', 'COLOR', 'FLOAT', 'STRING', 'EASING', 'TIMING'] as const
 export type FigmaVariableResolvedType = (typeof FIGMA_TYPES)[number]
 
@@ -111,7 +111,7 @@ export class FigmaVariablesAPI {
   ): FigmaVariable {
     const type = assertType('createVariable', resolvedType)
     if (!isModelledType(type))
-      throw new Error(`in createVariable: OpenPencil does not support ${type} variables`)
+      throw new Error(`in createVariable: OpenFigma does not support ${type} variables`)
     const collectionId = typeof collection === 'string' ? collection : collection.id
     if (!this.#graph.variableCollections.has(collectionId)) {
       throw new Error('in createVariable: Could not find variable collection')
