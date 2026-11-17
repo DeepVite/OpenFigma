@@ -4,7 +4,7 @@
   "vectorizeProvider": "Vektorisierungsdienst",
   "stockPhotos": "Stockfotos",
   "webSearch": "Websuche",
-  "webSearchDescription": "Mit deinem eigenen Exa-Schlüssel können der KI-Agent und Agenten mit den Werkzeugen von OpenPencil mit jedem Modell im Web suchen, und Exa rechnet direkt mit dir ab, statt Cloud-Guthaben zu verbrauchen.",
+  "webSearchDescription": "Mit deinem eigenen Exa-Schlüssel können der KI-Agent und Agenten mit den Werkzeugen von OpenFigma mit jedem Modell im Web suchen, und Exa rechnet direkt mit dir ab, statt Cloud-Guthaben zu verbrauchen.",
   "pexelsAPIKey": "Pexels-API-Schlüssel",
   "unsplashAccessKey": "Unsplash-Zugriffsschlüssel",
   "stockPhotoToolOptional": "Optional — Zugangsdaten für das search_stock_photos-Werkzeug",

@@ -7,7 +7,7 @@ export const HELP_MENU: AppMenuGroupSchema = {
   items: [
     {
       id: 'help-docs',
-      label: 'OpenPencil Documentation',
+      label: 'OpenFigma Documentation',
       handler: 'shell',
       palette: { keywords: ['docs', 'guide', 'manual', 'help'] }
     },
@@ -46,14 +46,14 @@ export const HELP_MENU: AppMenuGroupSchema = {
     },
     {
       id: 'help-github',
-      label: 'OpenPencil on GitHub',
+      label: 'OpenFigma on GitHub',
       handler: 'shell',
       palette: { keywords: ['github', 'source', 'code', 'repository'] }
     },
     {
       id: 'support-openpencil',
       feature: 'donation',
-      label: 'Support OpenPencil…',
+      label: 'Support OpenFigma…',
       handler: 'shell',
       palette: { keywords: ['donate', 'donation', 'sponsor', 'fund', 'tip'] }
     }

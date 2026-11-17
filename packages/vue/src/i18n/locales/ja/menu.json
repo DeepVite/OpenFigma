@@ -91,12 +91,12 @@
   "showVersionHistory": "バージョン履歴を表示",
   "saveToVersionHistory": "バージョン履歴に保存…",
   "reportProblem": "問題を報告…",
-  "supportOpenPencil": "OpenPencil を支援…",
-  "documentation": "OpenPencil ドキュメント",
+  "supportOpenFigma": "OpenFigma を支援…",
+  "documentation": "OpenFigma ドキュメント",
   "keyboardShortcuts": "キーボードショートカット",
   "whatsNew": "新機能",
   "community": "Discord コミュニティ",
-  "github": "GitHub の OpenPencil",
+  "github": "GitHub の OpenFigma",
   "newBoard": "新規ボード",
   "toggleAIChat": "AIチャットの切り替え"
 }

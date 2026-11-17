@@ -8,7 +8,7 @@ import EmailText from './EmailText.vue'
 import { greeting, useEmailLocalization } from './localization'
 
 /**
- * A letter from OpenPencil's founder to someone who asked for the official Cloud before it opened:
+ * A letter from OpenFigma's founder to someone who asked for the official Cloud before it opened:
  * thanks for waiting, it is a beta, and where to say what breaks. Replies reach a person, through
  * the deployment's reply address.
  */

@@ -714,7 +714,7 @@
     "items": [
       {
         "id": "help-docs",
-        "label": "OpenPencil Documentation"
+        "label": "OpenFigma Documentation"
       },
       {
         "id": "help-shortcuts",
@@ -748,11 +748,11 @@
       },
       {
         "id": "help-github",
-        "label": "OpenPencil on GitHub"
+        "label": "OpenFigma on GitHub"
       },
       {
         "id": "support-openpencil",
-        "label": "Support OpenPencil…",
+        "label": "Support OpenFigma…",
         "feature": "donation"
       }
     ]

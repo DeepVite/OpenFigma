@@ -5,18 +5,18 @@ import { i18n } from '#vue/i18n/create'
 export const aiMessageDefaults = {
   jumpToLatest: 'Jump to latest',
   chatSettings: 'Chat',
-  notificationsHint: 'Sent only while OpenPencil is in the background or shows another document.',
+  notificationsHint: 'Sent only while OpenFigma is in the background or shows another document.',
   notifyNeedsInput: 'An agent needs you',
   notifyNeedsInputHint: 'A permission request has waited a few seconds without an answer.',
   notifyFinished: 'A reply finished',
   notifyFailed: 'A reply failed',
   notificationsAllow: 'Allow notifications',
-  notificationsAllowHint: 'Your browser asks once whether OpenPencil may show notifications.',
+  notificationsAllowHint: 'Your browser asks once whether OpenFigma may show notifications.',
   notificationsBlocked:
     'Notifications are blocked for this site. Allow them in the browser’s site settings.',
   notificationsUnsupported: 'This browser cannot show notifications.',
   notificationsSystemHint:
-    'If none appear, allow OpenPencil in your system’s notification settings.',
+    'If none appear, allow OpenFigma in your system’s notification settings.',
   notifyTitle: params('{agent} · {document}'),
   notifyPermission: 'Asks for permission.',
   notifyPermissionAction: params('Asks for permission: {action}'),
@@ -245,7 +245,7 @@ export const aiMessageDefaults = {
   chatOutputLimit:
     'The model ran out of output tokens while reasoning. Raise Max output tokens or lower reasoning effort.',
   chatModelNotFound: 'The selected model is unavailable. Choose another model in Settings.',
-  chatNetworkFailed: 'OpenPencil could not reach the provider. Check your connection and endpoint.',
+  chatNetworkFailed: 'OpenFigma could not reach the provider. Check your connection and endpoint.',
   chatRateLimited: 'The provider rate limit was reached. Wait a moment and try again.',
   chatRequestFailed: 'The model request failed. Check the provider settings and try again.',
   chatAgentNotInstalled:
@@ -253,12 +253,12 @@ export const aiMessageDefaults = {
   openProviderSettingsAction: 'Open settings',
   cloudWorkspace: 'Workspace',
   cloudWorkspaceHint: 'The workspace whose plan pays for these requests.',
-  cloudAIUnavailable: 'Sign in to an OpenPencil Cloud server that offers AI to use these models.',
+  cloudAIUnavailable: 'Sign in to an OpenFigma Cloud server that offers AI to use these models.',
   cloudAINoWorkspace: 'None of your workspaces on this server includes AI.',
   cloudAICatalogFailed:
-    'OpenPencil Cloud could not list its models. Check your connection and try again.',
+    'OpenFigma Cloud could not list its models. Check your connection and try again.',
   cloudAIWorkspacesFailed:
-    'OpenPencil Cloud could not check which of your workspaces include AI. Check your connection and try again.',
+    'OpenFigma Cloud could not check which of your workspaces include AI. Check your connection and try again.',
   chatCloudCreditsExhausted:
     'This workspace has used this month’s AI credits. Manage its plan to add more.',
   chatCloudAllowanceUsed:
@@ -271,20 +271,20 @@ export const aiMessageDefaults = {
   cloudCreditsRenew: params('Renews {date}'),
   manageCloudPlanAction: 'Manage plan',
   chatCloudUnavailable:
-    'OpenPencil Cloud AI is unavailable. Sign in to OpenPencil Cloud and choose a workspace in Settings.',
+    'OpenFigma Cloud AI is unavailable. Sign in to OpenFigma Cloud and choose a workspace in Settings.',
   visionModelUnavailable: 'Choose a Vision model in Settings before attaching images.',
   chatPiCompanionMissing: 'Pi needs the Harness companion. Run guided setup to install it.',
   chatPiCompanionOutdated:
-    'The Harness companion doesn’t match this version of OpenPencil. Run guided setup to update it.',
+    'The Harness companion doesn’t match this version of OpenFigma. Run guided setup to update it.',
   chatMCPOutdated:
-    'OpenPencil’s MCP server doesn’t match this version of OpenPencil. Run guided setup to update it.',
+    'OpenFigma’s MCP server doesn’t match this version of OpenFigma. Run guided setup to update it.',
   chatPiSignIn:
     'Pi isn’t signed in to a provider. Run pi in a terminal and type /login, or add an AI Gateway key.',
   chatPiModel:
     'Pi has no model to use. Run pi in a terminal and type /model, or choose one in Settings.',
   completions: 'Completions',
   responses: 'Responses',
-  aiSetupWelcomeTitle: 'Welcome to OpenPencil',
+  aiSetupWelcomeTitle: 'Welcome to OpenFigma',
   aiSetupWelcomeDescription:
     'Create and edit designs on an open canvas. Import Figma files and make them your own.',
   aiSetupWelcomeAITitle: 'Design with AI',
@@ -311,9 +311,9 @@ export const aiMessageDefaults = {
   aiSetupAccessAgents: 'Coding agents on this computer',
   aiSetupAccessAgentsDescription:
     'Use your existing subscription. Pick one of the agent’s models, or leave the choice to it.',
-  aiSetupAccessAgentsDesktop: 'Coding agents are available in the OpenPencil desktop app.',
+  aiSetupAccessAgentsDesktop: 'Coding agents are available in the OpenFigma desktop app.',
   aiSetupAccessAgentsSandboxed:
-    'This install of OpenPencil can’t start coding agents. The download from GitHub can.',
+    'This install of OpenFigma can’t start coding agents. The download from GitHub can.',
   modelProviderSetUp: 'Set up',
   aiSetupAccessAPI: 'API accounts',
   aiSetupAccessServer: 'Local model or company server',
@@ -326,20 +326,20 @@ export const aiMessageDefaults = {
   aiSetupConnectTitle: 'Connect your AI',
   aiSetupNothingDescription: 'Go back to choose other access, or set up AI in advanced settings.',
   aiSetupAgentDescription: params(
-    'OpenPencil starts {agent} when you send a message, with the account {agent} is signed in to.'
+    'OpenFigma starts {agent} when you send a message, with the account {agent} is signed in to.'
   ),
   aiSetupAgentInstall: 'If it is not installed yet, run:',
   aiSetupAgentInstallSupported: 'Install the supported adapter:',
   aiSetupAgentChecking: 'Checking this computer…',
   aiSetupAgentInstalled: 'installed',
   aiSetupAgentNotFound: 'not found',
-  aiSetupAgentMCP: 'OpenPencil MCP server',
+  aiSetupAgentMCP: 'OpenFigma MCP server',
   aiSetupAgentMCPInstall:
-    'Coding agents reach the canvas through OpenPencil’s MCP server. Install it with:',
+    'Coding agents reach the canvas through OpenFigma’s MCP server. Install it with:',
   aiSetupAgentPromptHint: params(
-    'Already using {agent} or another coding agent? Copy the setup prompt and paste it there; it installs what OpenPencil needs.'
+    'Already using {agent} or another coding agent? Copy the setup prompt and paste it there; it installs what OpenFigma needs.'
   ),
-  aiSetupAgentNeedsAdapter: 'installed · OpenPencil adapter missing',
+  aiSetupAgentNeedsAdapter: 'installed · OpenFigma adapter missing',
   aiSetupAgentInstallAdapter: 'Install adapter',
   aiSetupAgentInstallMCP: 'Install MCP server',
   aiSetupAgentUpdateMCP: 'Update MCP server',
@@ -353,7 +353,7 @@ export const aiMessageDefaults = {
   aiSetupAgentInstallFailed:
     'The installation didn’t finish. Check your connection, or run the command yourself.',
   aiSetupAgentMCPStartFailed:
-    'The MCP server is installed but didn’t start. Restart OpenPencil, then check again.',
+    'The MCP server is installed but didn’t start. Restart OpenFigma, then check again.',
   aiSetupAgentLookupFailed: 'Couldn’t check this computer. Try again.',
   aiSetupAgentCopyPrompt: 'Copy setup prompt',
   aiSetupAgentCheckAgain: 'Check again',
@@ -374,19 +374,19 @@ export const aiMessageDefaults = {
   aiSetupAgentSignInCode: 'Code from the sign-in page, if it shows one',
   aiSetupAgentSignInSubmitCode: 'Submit code',
   aiSetupAgentSignInFailed: params('Couldn’t sign in to {agent}. Try again.'),
-  aiSetupAgentTools: 'OpenPencil tools',
+  aiSetupAgentTools: 'OpenFigma tools',
   aiSetupAgentToolsConnected: 'connected',
   aiSetupAgentToolsUnreachable: 'not reachable',
   aiSetupAgentToolsFailed: params(
-    '{agent} can’t reach OpenPencil’s tools, so chats with it won’t start.'
+    '{agent} can’t reach OpenFigma’s tools, so chats with it won’t start.'
   ),
   aiSetupAgentToolsHint:
-    'Check that OpenPencil’s MCP server is running in Settings → MCP, then press Check again.',
+    'Check that OpenFigma’s MCP server is running in Settings → MCP, then press Check again.',
   aiSetupAgentAdapterMismatch: params(
-    'OpenPencil found {path}, another adapter it doesn’t support. Install the supported one, then remove this one or move it later on your PATH.'
+    'OpenFigma found {path}, another adapter it doesn’t support. Install the supported one, then remove this one or move it later on your PATH.'
   ),
   aiSetupPiDescription:
-    'OpenPencil runs Pi through its Harness companion and uses the providers you signed in to in Pi.',
+    'OpenFigma runs Pi through its Harness companion and uses the providers you signed in to in Pi.',
   aiSetupPiCompanion: 'Harness companion',
   aiSetupPiInstallCompanion: 'Install companion',
   aiSetupPiUpdateCompanion: 'Update companion',
@@ -424,7 +424,7 @@ export const aiMessageDefaults = {
   aiSetupSignInReopen: 'Open again',
   aiSetupOpenRouterOrKey: 'Or paste an API key',
   aiSetupOpenRouterBlocked:
-    'Your browser blocked the sign-in window. Allow pop-ups for OpenPencil and try again.',
+    'Your browser blocked the sign-in window. Allow pop-ups for OpenFigma and try again.',
   aiSetupSignInCancelled: 'Sign-in was cancelled.',
   aiSetupSignInExpired: 'Sign-in took too long. Try again.',
   aiSetupOpenRouterFailed: 'Couldn’t sign in to OpenRouter. Try again or paste an API key.',
@@ -436,7 +436,7 @@ export const aiMessageDefaults = {
   aiSetupSignInChange: 'Use a different account',
   aiSetupSignOut: 'Sign out',
   aiSetupAccessSubscriptions: 'Subscriptions',
-  aiSetupAccessChatGPT: 'Use your ChatGPT plan’s models in OpenPencil’s own agent.',
+  aiSetupAccessChatGPT: 'Use your ChatGPT plan’s models in OpenFigma’s own agent.',
   aiSetupChatGPTSignIn: 'Sign in with ChatGPT',
   aiSetupChatGPTWaiting: 'Finish signing in to ChatGPT in your browser.',
   aiSetupChatGPTSignedInTitle: 'Signed in to ChatGPT',
@@ -444,10 +444,10 @@ export const aiMessageDefaults = {
   aiSetupChatGPTPortInUse:
     'Another sign-in, such as `codex login`, is using port 1455. Finish or close it, then try again.',
   aiSetupChatGPTCallbackSignedIn:
-    'Signed in to ChatGPT. You can close this tab and return to OpenPencil.',
+    'Signed in to ChatGPT. You can close this tab and return to OpenFigma.',
   aiSetupChatGPTCallbackCancelled: 'ChatGPT sign-in was cancelled. You can close this tab.',
   aiSetupChatGPTCallbackStale:
-    'This sign-in link belongs to an earlier attempt. Start again from OpenPencil.',
+    'This sign-in link belongs to an earlier attempt. Start again from OpenFigma.',
   aiSetupChatGPTUsage: 'Replies count toward your ChatGPT plan’s usage limits.',
   aiSetupSavedSignInHint: 'Your saved sign-in will be used.',
   aiSetupUseRecommended: 'Use recommended setup',
@@ -484,7 +484,7 @@ export const aiMessageDefaults = {
   skillsUploadSeveral: 'The archive holds more than one skill. Upload them one at a time.',
   skillsUploadUnreadable: 'Choose a ZIP archive or a SKILL.md text file.',
   skillsDelete: 'Delete skill',
-  skillsDeleteDescription: params('“{name}” will be removed from OpenPencil.'),
+  skillsDeleteDescription: params('“{name}” will be removed from OpenFigma.'),
   skillsLocation: 'Location',
   skillsFiles: 'Files',
   skillsInstructions: 'Instructions',
@@ -541,14 +541,14 @@ export const aiMessageDefaults = {
   reviewEmpty: 'There is nothing on this page to review.',
   reviewUnsupported: 'Pi cannot review designs. Assign another model to Review in Settings.',
   promptDesignDescription:
-    'Your own instructions for the chat, after OpenPencil’s or in their place. The design JSX reference always follows.',
+    'Your own instructions for the chat, after OpenFigma’s or in their place. The design JSX reference always follows.',
   promptDesignMode: 'Your instructions',
   promptDesignPlaceholder:
     'For example: Use our 8px spacing scale and the brand colors from the Tokens page.',
-  promptDesignAdd: 'Add to OpenPencil’s',
-  promptDesignReplace: 'Replace OpenPencil’s',
-  promptDesignStart: 'Start from OpenPencil’s',
-  promptDesignReplaced: 'OpenPencil’s instructions are off',
+  promptDesignAdd: 'Add to OpenFigma’s',
+  promptDesignReplace: 'Replace OpenFigma’s',
+  promptDesignStart: 'Start from OpenFigma’s',
+  promptDesignReplaced: 'OpenFigma’s instructions are off',
   promptDesignReplaceWarning:
     'Without them the model may use its tools poorly. Reset brings them back.',
   promptReviewDescription: 'What the Review model is told for /review and Review this change.',
@@ -568,7 +568,7 @@ export const aiMessageDefaults = {
   promptPreview: 'Preview with sample values',
   promptUnknownVariable: params('{name} is not a variable of this prompt, so it stays empty.'),
   promptErrors: 'This prompt has errors',
-  promptErrorsHint: 'OpenPencil’s is used until they are fixed.',
+  promptErrorsHint: 'OpenFigma’s is used until they are fixed.',
   promptErrorAt: params('Line {line}: {message}.'),
   tokenUsage: 'Token usage',
   tokenUsageHint: "Shows each reply's tokens.",

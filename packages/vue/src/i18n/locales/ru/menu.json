@@ -91,12 +91,12 @@
   "showVersionHistory": "Показать историю версий",
   "saveToVersionHistory": "Сохранить в историю версий…",
   "reportProblem": "Сообщить о проблеме…",
-  "supportOpenPencil": "Поддержать OpenPencil…",
-  "documentation": "Документация OpenPencil",
+  "supportOpenFigma": "Поддержать OpenFigma…",
+  "documentation": "Документация OpenFigma",
   "keyboardShortcuts": "Сочетания клавиш",
   "whatsNew": "Что нового",
   "community": "Сообщество в Discord",
-  "github": "OpenPencil на GitHub",
+  "github": "OpenFigma на GitHub",
   "newBoard": "Новая доска",
   "toggleAIChat": "Переключить чат AI"
 }

@@ -9,7 +9,7 @@
   "collapseIssues": "Ocultar problemas de fontes",
   "noSubstitute": "nenhum substituto disponível",
   "unsupportedFormatShort": "formato não compatível",
-  "unsupportedFormat": "Instalada, mas em um formato que o OpenPencil ainda não consegue desenhar",
+  "unsupportedFormat": "Instalada, mas em um formato que o OpenFigma ainda não consegue desenhar",
   "affectedLayer": "1 camada afetada",
   "affectedLayerCount": "{count} camadas afetadas",
   "settingsDesktopDescription": "Acesse fontes do sistema, provedores online, pacotes de fallback e downloads em cache.",

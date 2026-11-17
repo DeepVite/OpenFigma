@@ -29,10 +29,10 @@
   "deepLinkPickerDismissed": "أُلغي الرابط: لم يُختر أي ملف.",
   "deepLinkCancelled": "أُلغي الرابط: كان المتوقع ملفًا ينتهي بـ «{file}».",
   "deepLinkNodeNotFound": "لم يُعثر على العقدة «{node}» في «{file}».",
-  "openQueuedFilesFailed": "تعذّر فتح الملفات المُسلَّمة إلى OpenPencil: {error}",
+  "openQueuedFilesFailed": "تعذّر فتح الملفات المُسلَّمة إلى OpenFigma: {error}",
   "tokensLeftOut": "لم تُضمَّن في ورقة الأنماط: {names}.",
   "designTokensLeftOut": "لم تُضمَّن في رموز التصميم: {names}.",
   "designTokensAmbiguous": "تشير هذه الأنماط إلى متغيّر يوجد مساره أيضًا في مجموعة أخرى، لذا قد تقرأ أدوات أخرى المتغيّر الخطأ: {names}.",
   "designTokensImported": "رموز التصميم المستوردة: {count}.",
-  "unsupportedVariableExpressions": "لا يستطيع OpenPencil حساب هذه المتغيّرات بعد، لذا تحتفظ الطبقات بالقيم المحفوظة في الملف: {names}."
+  "unsupportedVariableExpressions": "لا يستطيع OpenFigma حساب هذه المتغيّرات بعد، لذا تحتفظ الطبقات بالقيم المحفوظة في الملف: {names}."
 }

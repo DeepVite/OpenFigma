@@ -2,9 +2,9 @@ import { count, params } from '@nanostores/i18n'
 
 import { i18n } from '#vue/i18n/create'
 
-/** Copy for OpenPencil Cloud inside the editor: connecting, sharing, syncing, and Home. */
+/** Copy for OpenFigma Cloud inside the editor: connecting, sharing, syncing, and Home. */
 export const cloudMessageDefaults = {
-  productName: 'OpenPencil Cloud',
+  productName: 'OpenFigma Cloud',
   continue: 'Continue',
   tryAgain: 'Try again',
   signIn: 'Sign in',
@@ -23,10 +23,10 @@ export const cloudMessageDefaults = {
     'Someone saved a newer version while you had unsent changes. Nothing is lost until you choose.',
 
   // Connect
-  connectHeading: 'Connect to OpenPencil Cloud',
+  connectHeading: 'Connect to OpenFigma Cloud',
   connectDescription: 'Keep files in sync across devices and invite people to edit with you.',
   connectServerHeading: 'Connect your team’s server',
-  connectServerDescription: 'Enter the address your team uses for OpenPencil Cloud.',
+  connectServerDescription: 'Enter the address your team uses for OpenFigma Cloud.',
   checkingServer: 'Checking the server…',
   signInHeading: params('Sign in to {name}'),
   onHost: params('On {host}.'),
@@ -37,27 +37,27 @@ export const cloudMessageDefaults = {
   deviceHeading: 'Confirm in your browser',
   deviceDescription: params('Approve this sign-in on {host}.'),
   deviceDescriptionNoHost: 'Approve this sign-in on the server.',
-  officialDescription: params('Hosted by OpenPencil · {host}'),
+  officialDescription: params('Hosted by OpenFigma · {host}'),
   selfHostedLabel: 'Your team’s server',
-  selfHostedDescription: 'A self-hosted OpenPencil Cloud',
+  selfHostedDescription: 'A self-hosted OpenFigma Cloud',
   serverAddress: 'Server address',
   errorInvalidAddressHeading: 'Enter the server’s web address',
   errorInvalidAddressDescription:
     'Use the address your team gave you, such as https://cloud.example.com.',
   errorUnreachableHeading: 'Couldn’t reach this server',
   errorUnreachableDescription: 'Check the address and your connection, then try again.',
-  errorNotCloudHeading: 'This isn’t an OpenPencil Cloud server',
+  errorNotCloudHeading: 'This isn’t an OpenFigma Cloud server',
   errorNotCloudDescription:
-    'The address answered, but not as OpenPencil Cloud. Ask your team for the right one.',
+    'The address answered, but not as OpenFigma Cloud. Ask your team for the right one.',
   errorServerOutdatedHeading: 'This server needs an update',
   errorServerOutdatedDescription:
-    'It runs an older version of OpenPencil Cloud than this app supports.',
-  errorEditorOutdatedHeading: 'Update OpenPencil to use this server',
-  errorEditorOutdatedDescription: 'This server needs a newer version of OpenPencil than this one.',
+    'It runs an older version of OpenFigma Cloud than this app supports.',
+  errorEditorOutdatedHeading: 'Update OpenFigma to use this server',
+  errorEditorOutdatedDescription: 'This server needs a newer version of OpenFigma than this one.',
   editorOutdatedBanner: params(
-    '{host} needs a newer version of OpenPencil. Update to keep working with your files there.'
+    '{host} needs a newer version of OpenFigma. Update to keep working with your files there.'
   ),
-  updateOpenPencil: 'Update OpenPencil',
+  updateOpenFigma: 'Update OpenFigma',
   errorDeniedHeading: 'Sign-in was denied',
   errorDeniedDescription: 'The request was turned down in the browser. Start again to sign in.',
   errorExpiredHeading: 'The code expired',
@@ -134,8 +134,8 @@ export const cloudMessageDefaults = {
 
   // Share
   shareHeading: params('Share “{name}”'),
-  shareDescriptionInWorkspace: params('In {workspace} on OpenPencil Cloud'),
-  shareDescription: 'On OpenPencil Cloud',
+  shareDescriptionInWorkspace: params('In {workspace} on OpenFigma Cloud'),
+  shareDescription: 'On OpenFigma Cloud',
   shareAddPeople: 'Add people by email',
   shareEmailAddress: 'Email address',
   shareNewPeoplePermission: 'Permission for new people',
@@ -299,8 +299,8 @@ export const cloudMessageDefaults = {
   settingsEmptyDescription:
     'Keep files in sync across devices and edit them with others. Documents on this device stay where they are.',
   settingsConnectServer: 'Connect a server',
-  settingsOfficialDescription: 'Hosted by OpenPencil, nothing to set up.',
-  settingsSelfHostedDescription: 'A self-hosted OpenPencil Cloud, at the address your team uses.',
+  settingsOfficialDescription: 'Hosted by OpenFigma, nothing to set up.',
+  settingsSelfHostedDescription: 'A self-hosted OpenFigma Cloud, at the address your team uses.',
   settingsOnHome: 'On Home',
   settingsSignInExpired: 'Sign-in expired',
   settingsSignInExpiredFor: params('Sign-in expired for {email}'),
@@ -361,7 +361,7 @@ export const cloudMessageDefaults = {
   homeSignIn: 'Sign in…',
   homeStorage: 'Storage',
   homeStorageSettings: 'Storage settings',
-  homeCloudOnHost: params('OpenPencil Cloud · {host}'),
+  homeCloudOnHost: params('OpenFigma Cloud · {host}'),
   homeUsageUsed: params('{used} used'),
   homeUsageOf: params('{used} of {total}'),
   // Every workspace an account owns shares its plan's storage, so this counts all of them.
@@ -401,7 +401,7 @@ export const cloudMessageDefaults = {
   communityBanner: 'A community example, open read-only.',
   communitySaveCopy: 'Save a copy',
   betaBanner:
-    'OpenPencil Cloud is in beta, so some things may not work yet. To use it in the desktop app, install the beta.',
+    'OpenFigma Cloud is in beta, so some things may not work yet. To use it in the desktop app, install the beta.',
   betaDownload: 'Download the beta',
   savePublicLabel: 'Public',
   savePublicHeading: 'Anyone can open what you save here',

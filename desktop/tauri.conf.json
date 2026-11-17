@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "OpenPencil",
+  "productName": "OpenFigma",
   "version": "0.17.0-beta.5",
   "identifier": "net.dannote.open-pencil",
   "build": {
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "OpenPencil",
+        "title": "OpenFigma",
         "width": 1280,
         "height": 800,
         "dragDropEnabled": false,

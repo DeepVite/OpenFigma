@@ -37,8 +37,8 @@ export const APP_MENU_SCHEMA = [
  * sit between them. Only the labels and shortcuts are shared here.
  */
 export const APP_MENU_APP_ITEMS = [
-  { id: 'about', label: 'About OpenPencil' },
+  { id: 'about', label: 'About OpenFigma' },
   { id: 'check-updates', label: 'Check for Updates…' },
   SETTINGS_MENU_ITEM,
-  { id: 'quit', label: 'Quit OpenPencil', shortcut: 'Mod+Q' }
+  { id: 'quit', label: 'Quit OpenFigma', shortcut: 'Mod+Q' }
 ] satisfies AppMenuActionItem[]

@@ -66,7 +66,7 @@
   "paletteSearchPlaceholder": "Befehl eingeben oder suchen…",
   "paletteAriaLabel": "Befehlspalette",
   "paletteSearchAriaLabel": "Befehle suchen",
-  "paletteDescription": "OpenPencil-Befehle suchen und ausführen.",
+  "paletteDescription": "OpenFigma-Befehle suchen und ausführen.",
   "paletteNoCommands": "Keine Befehle gefunden.",
   "paletteBack": "Zurück"
 }

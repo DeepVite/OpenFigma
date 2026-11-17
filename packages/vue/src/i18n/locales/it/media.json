@@ -4,7 +4,7 @@
   "vectorizeProvider": "Servizio di vettorializzazione",
   "stockPhotos": "Foto stock",
   "webSearch": "Ricerca web",
-  "webSearchDescription": "Con la tua chiave Exa, l’agente IA e gli agenti che usano gli strumenti di OpenPencil possono cercare sul web con qualsiasi modello, ed Exa addebita a te invece di usare i crediti Cloud.",
+  "webSearchDescription": "Con la tua chiave Exa, l’agente IA e gli agenti che usano gli strumenti di OpenFigma possono cercare sul web con qualsiasi modello, ed Exa addebita a te invece di usare i crediti Cloud.",
   "pexelsAPIKey": "Chiave API Pexels",
   "unsplashAccessKey": "Chiave di accesso Unsplash",
   "stockPhotoToolOptional": "Facoltativo — abilita lo strumento foto stock",

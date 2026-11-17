@@ -1,6 +1,6 @@
 {
   "sectionTitle": "Trabalho não salvo",
-  "sectionDescription": "Alterações não salvas mantidas de documentos fechados sem salvar ou abertos quando o OpenPencil foi encerrado. Abra um deles para continuar trabalhando.",
+  "sectionDescription": "Alterações não salvas mantidas de documentos fechados sem salvar ou abertos quando o OpenFigma foi encerrado. Abra um deles para continuar trabalhando.",
   "crashNote": "Mantido após uma falha",
   "restoreFailed": "Não foi possível restaurar este documento.",
   "discardFailed": "Não foi possível descartar esta cópia.",

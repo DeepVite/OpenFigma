@@ -91,12 +91,12 @@
   "showVersionHistory": "Pokaż historię wersji",
   "saveToVersionHistory": "Zapisz w historii wersji…",
   "reportProblem": "Zgłoś problem…",
-  "supportOpenPencil": "Wesprzyj OpenPencil…",
-  "documentation": "Dokumentacja OpenPencil",
+  "supportOpenFigma": "Wesprzyj OpenFigma…",
+  "documentation": "Dokumentacja OpenFigma",
   "keyboardShortcuts": "Skróty klawiszowe",
   "whatsNew": "Co nowego",
   "community": "Społeczność na Discordzie",
-  "github": "OpenPencil na GitHubie",
+  "github": "OpenFigma na GitHubie",
   "newBoard": "Nowa tablica",
   "toggleAIChat": "Przełącz czat AI"
 }

@@ -18,7 +18,7 @@ import { LOGO_URL, SITE_URL, styles } from './brand'
 import { useEmailLocalization } from './localization'
 
 /**
- * The branded email every OpenPencil service sends, in its reader's language and direction: a
+ * The branded email every OpenFigma service sends, in its reader's language and direction: a
  * heading, the paragraphs in the default slot, one button, the sender's name in `signature` when a
  * person writes, and small print in `note`.
  */
@@ -39,7 +39,7 @@ const { locale, dir, t } = useEmailLocalization()
     <Preview>{{ preview }}</Preview>
     <Body :style="styles.body">
       <Container :style="styles.card">
-        <Img :src="LOGO_URL" :width="44" :height="44" alt="OpenPencil" :style="styles.logo" />
+        <Img :src="LOGO_URL" :width="44" :height="44" alt="OpenFigma" :style="styles.logo" />
         <Heading as="h1" :style="styles.heading">{{ heading }}</Heading>
         <slot />
         <Section v-if="action" :style="styles.action">

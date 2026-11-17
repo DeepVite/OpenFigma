@@ -4,7 +4,7 @@
   "vectorizeProvider": "خدمة التحويل إلى متجهات",
   "stockPhotos": "صور مخزنة",
   "webSearch": "البحث على الويب",
-  "webSearchDescription": "بمفتاح Exa الخاص بك، يستطيع وكيل الذكاء الاصطناعي والوكلاء الذين يستخدمون أدوات OpenPencil البحث على الويب بأي نموذج، وتُحاسبك Exa بدلًا من استخدام أرصدة Cloud.",
+  "webSearchDescription": "بمفتاح Exa الخاص بك، يستطيع وكيل الذكاء الاصطناعي والوكلاء الذين يستخدمون أدوات OpenFigma البحث على الويب بأي نموذج، وتُحاسبك Exa بدلًا من استخدام أرصدة Cloud.",
   "pexelsAPIKey": "مفتاح Pexels API (صور مخزنية)",
   "unsplashAccessKey": "مفتاح وصول Unsplash",
   "stockPhotoToolOptional": "اختياري — لأداة search_stock_photos",
