@@ -13,8 +13,6 @@ import AppButton from '@/components/ui/button/AppButton.vue'
 import AppInput from '@/components/ui/input/AppInput.vue'
 import Tip from '@/components/ui/overlay/Tip.vue'
 
-import HomeJoinRoom from './HomeJoinRoom.vue'
-
 /** The place a new design is created in, when it is not a local file. */
 const { destination = null } = defineProps<{ destination?: string | null }>()
 const emit = defineEmits<{ 'new-document': [kind: DocumentKind] }>()
@@ -71,9 +69,6 @@ watch(
       <template #leading><icon-lucide-search class="size-4" /></template>
     </AppInput>
     <div class="grid grid-cols-2 gap-2 md:contents">
-      <div class="col-span-2 grid md:contents">
-        <HomeJoinRoom :size="isTouch ? 'lg' : 'md'" />
-      </div>
       <AppButton
         :size="isTouch ? 'lg' : 'md'"
         variant="outline"
