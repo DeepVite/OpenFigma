@@ -1,24 +1,21 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import { useAutomationMessages, useCommonMessages } from '@open-pencil/vue/i18n'
+import { useAutomationMessages } from '@open-pencil/vue/i18n'
 
 import type { WebMCPMode } from '@/app/automation/webmcp/schema'
 import type { WebMCPRuntimeState } from '@/app/automation/webmcp/service'
 import SettingsGroup from '@/components/settings/layout/SettingsGroup.vue'
-import SettingsLink from '@/components/settings/layout/SettingsLink.vue'
 import SettingsRow from '@/components/settings/layout/SettingsRow.vue'
 import SettingsSection from '@/components/settings/layout/SettingsSection.vue'
 import AppAlert from '@/components/ui/feedback/AppAlert.vue'
 import AppStatus from '@/components/ui/feedback/AppStatus.vue'
 import AppSelect from '@/components/ui/select/AppSelect.vue'
-import { WEBMCP_DOCS_URL } from '@/constants'
 import { settingsSelectUI } from '@/theme/settings/controls'
 
 const mode = defineModel<WebMCPMode>({ required: true })
 const { state } = defineProps<{ state: WebMCPRuntimeState }>()
 const automation = useAutomationMessages()
-const common = useCommonMessages()
 const options = computed(() => [
   { value: 'off' as const, label: automation.value.accessOff },
   { value: 'inspect' as const, label: automation.value.accessInspect },
@@ -77,7 +74,6 @@ const status = computed(
     <template #title>WebMCP</template>
     <template #description>
       {{ automation.webmcpDescription }}
-      <SettingsLink :href="WEBMCP_DOCS_URL">{{ common.learnMore }}</SettingsLink>
     </template>
     <SettingsGroup>
       <SettingsRow :label="automation.browserAccess" :description="descriptions[mode]">

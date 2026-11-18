@@ -44,6 +44,8 @@ export async function checkCloudAvailability(address: string): Promise<void> {
   const choice = new URL(address).searchParams.get(PREVIEW_PARAM)
   if (choice === 'preview') preview.value = true
   else if (choice === 'off') preview.value = false
+  // A self-hosted Cloud editor must not call the upstream official server.
+  if (!IS_OFFICIAL_CLOUD_SITE) return
   // Unreachable, or not public yet: the last answer stands.
   const discovery = await discoverCloudServer(OFFICIAL_CLOUD_URL).catch(() => null)
   if (discovery) listedFrom.value = discovery.listing?.minimumEditorVersion ?? null

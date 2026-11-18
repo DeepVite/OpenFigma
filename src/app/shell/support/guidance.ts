@@ -18,7 +18,6 @@ export interface SupportLink {
   readonly url: string
 }
 
-export const SYSTEM_REQUIREMENTS_URL = 'https://openpencil.dev/getting-started#system-requirements'
 export const WEBVIEW2_DOWNLOAD_URL = 'https://developer.microsoft.com/microsoft-edge/webview2/'
 const ISSUE_URL = 'https://github.com/open-pencil/open-pencil/issues/new'
 
@@ -71,7 +70,7 @@ const DESKTOP_ISSUE_PLATFORMS: Partial<Record<SupportEnvironment['os'], string>>
 const SELF_HOSTED_WEB_PLATFORM = 'Web (self-hosted or other address)'
 
 function issuePlatform(env: SupportEnvironment): string {
-  if (env.host === 'browser') return 'Web (app.openpencil.dev)'
+  if (env.host === 'browser') return 'Web (OpenFigma)'
   return DESKTOP_ISSUE_PLATFORMS[env.os] ?? 'Not sure'
 }
 
@@ -116,10 +115,6 @@ export function problemReportIssueURL(env: SupportEnvironment, site: EditorSite)
     ? [EDITOR_SITE_DETAILS[site], ...environmentDetails(env)]
     : environmentDetails(env)
   return issueLink(env, 'bug: ', details, elsewhere ? SELF_HOSTED_WEB_PLATFORM : undefined).url
-}
-
-function requirementsLink(): SupportLink {
-  return { label: 'System requirements', url: SYSTEM_REQUIREMENTS_URL }
 }
 
 interface Advice {
@@ -251,7 +246,7 @@ export function unsupportedNotice(
         'A browser policy, an extension, or a preview build may have disabled it. Try a current release of Chrome, Edge, Firefox, or Safari.'
       ],
       details,
-      links: [requirementsLink(), report]
+      links: [report]
     }
   }
 
@@ -260,7 +255,7 @@ export function unsupportedNotice(
     heading: advice.heading,
     paragraphs: advice.paragraphs,
     details,
-    links: [requirementsLink(), ...(advice.extraLinks ?? []), report]
+    links: [...(advice.extraLinks ?? []), report]
   }
 }
 
@@ -294,6 +289,6 @@ export function bootFailureNotice(env: SupportEnvironment, error: unknown): Supp
       'If it keeps happening, report the problem and include the details below.'
     ],
     details,
-    links: [requirementsLink(), issueLink(env, 'bug: app fails to start', details)]
+    links: [issueLink(env, 'bug: app fails to start', details)]
   }
 }

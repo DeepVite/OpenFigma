@@ -53,8 +53,11 @@ const onCommunity = computed(() => route.path.startsWith(CLOUD_COMMUNITY_PATH))
         >
           {{ messages.communityTitle }}
         </SiteLink>
-        <SiteLink :href="site.helpURL" external place="nav">
-          {{ site.official ? messages.siteDocs : messages.help }}
+        <SiteLink v-if="site.official" :href="site.helpURL" external place="nav">
+          {{ messages.siteDocs }}
+        </SiteLink>
+        <SiteLink v-else-if="site.ownHelp" :href="site.helpURL" external place="nav">
+          {{ messages.help }}
         </SiteLink>
         <SiteLink v-if="site.official" :href="DESKTOP_DOWNLOAD_URL" external place="nav">
           {{ messages.siteDownload }}

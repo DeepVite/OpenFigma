@@ -159,8 +159,8 @@ const INSTALL_SERIES: DailySeries<keyof DailyActiveDay & string>[] = [
 ]
 // The web app keeps the web installs' color; the site takes the next one.
 const VISIT_SERIES: DailySeries<keyof DailyVisits & string>[] = [
-  { key: 'site', name: 'openpencil.dev', color: 'var(--color-chart-3)' },
-  { key: 'app', name: 'app.openpencil.dev', color: 'var(--color-chart-2)' }
+  { key: 'site', name: 'OpenFigma', color: 'var(--color-chart-3)' },
+  { key: 'app', name: 'app.openfigma', color: 'var(--color-chart-2)' }
 ]
 const TRAFFIC_SERIES: DailySeries<keyof DailyTraffic & string>[] = [
   { key: 'views', name: 'Views', color: 'var(--color-chart-1)' },
@@ -381,7 +381,7 @@ const sharingNote = computed(() => {
               stacked
             />
           </MetricsCard>
-          <MetricsCard heading="Website" note="Visits to openpencil.dev by page and country">
+          <MetricsCard heading="Website" note="Visits to OpenFigma by page and country">
             <div :class="ui.breakdown()">
               <div>
                 <h4 :class="ui.sectionLabel()">Top pages</h4>

@@ -6,7 +6,6 @@ import { useCloudPortalMessages } from '@open-pencil/vue/i18n'
 import { useSiteIdentity, type SiteLinkTarget } from '@/app/cloud-portal/identity'
 import BrandMark from '@/components/brand/BrandMark.vue'
 import PortalLanguageSelect from '@/components/cloud-portal/layout/PortalLanguageSelect.vue'
-import { DOCS_URL, REPOSITORY_URL } from '@/constants'
 
 import SiteLink from './SiteLink.vue'
 import { siteCompactFooter } from './ui'
@@ -40,14 +39,10 @@ const operatorLinks = computed<SiteLinkTarget[]>(() => [
         </SiteLink>
       </nav>
       <nav :class="ui.line()" aria-label="OpenFigma">
-        <SiteLink :href="DOCS_URL" external>
-          <span :class="ui.poweredBy()">
-            <BrandMark variant="micro" decorative :class="ui.poweredMark()" />
-            {{ messages.sitePoweredBy }}
-          </span>
-        </SiteLink>
-        <SiteLink :href="DOCS_URL" external>{{ messages.siteDocs }}</SiteLink>
-        <SiteLink :href="REPOSITORY_URL" external>{{ messages.siteSourceCode }}</SiteLink>
+        <span :class="ui.poweredBy()">
+          <BrandMark variant="micro" decorative :class="ui.poweredMark()" />
+          {{ messages.sitePoweredBy }}
+        </span>
         <PortalLanguageSelect />
       </nav>
     </div>

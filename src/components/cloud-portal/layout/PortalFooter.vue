@@ -2,12 +2,11 @@
 import { useCloudPortalMessages } from '@open-pencil/vue/i18n'
 
 import { portalPublic } from '@/components/cloud-portal/ui'
-import { CLOUD_DOCS_URL } from '@/constants'
 
 import { usePortalLegal } from './legal'
 import PortalLanguageSelect from './PortalLanguageSelect.vue'
 
-/** The foot of a public Cloud page: the server's address, help, and the operator's legal links. */
+/** The foot of a public Cloud page: the server's address and the operator's legal links. */
 const { host } = defineProps<{ host: string }>()
 
 const ui = portalPublic()
@@ -18,9 +17,6 @@ const legal = usePortalLegal()
 <template>
   <footer :class="ui.footer()">
     <span>{{ host }}</span>
-    <a :href="CLOUD_DOCS_URL" target="_blank" rel="noreferrer" :class="ui.footerLink()">
-      {{ messages.help }}
-    </a>
     <a
       v-if="legal?.termsURL"
       :href="legal.termsURL"

@@ -12,7 +12,6 @@ import { mcpConnectionSettings } from '@/app/integrations/mcp'
 import { useMCPConnectionForm } from '@/app/integrations/mcp/settings/form'
 import { useMCPConnectionSettings } from '@/app/integrations/mcp/settings/use'
 import { useSettingsFormGuard } from '@/app/settings/navigation/use'
-import SettingsLink from '@/components/settings/layout/SettingsLink.vue'
 import SettingsPage from '@/components/settings/layout/SettingsPage.vue'
 import SettingsSection from '@/components/settings/layout/SettingsSection.vue'
 import AppButton from '@/components/ui/button/AppButton.vue'
@@ -20,7 +19,6 @@ import { AppAlertDialogRoot, AppDialogFooter, AppDialogHeader } from '@/componen
 import AppPlaceholder from '@/components/ui/feedback/AppPlaceholder.vue'
 import AppActionRow from '@/components/ui/list/AppActionRow.vue'
 import PanelDrillIn from '@/components/ui/panel/PanelDrillIn.vue'
-import { MCP_CONNECTIONS_DOCS_URL } from '@/constants'
 
 import MCPConnectionEditor from './MCPConnectionEditor.vue'
 
@@ -115,7 +113,6 @@ async function remove() {
           <template #title>{{ automation.connections }}</template>
           <template #description>
             {{ automation.connectionsDescription }}
-            <SettingsLink :href="MCP_CONNECTIONS_DOCS_URL">{{ common.learnMore }}</SettingsLink>
           </template>
           <template #actions>
             <AppButton variant="outline" :loading="busy" @click="startAdd">

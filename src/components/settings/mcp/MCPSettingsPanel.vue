@@ -2,7 +2,6 @@
 import { computed } from 'vue'
 
 import {
-  useAIMessages,
   useAutomationMessages,
   useCommonMessages,
   useSettingsMessages
@@ -21,7 +20,6 @@ import { needsMCPInstall } from '@/app/automation/mcp/setup-prompt'
 import { openToolAccessSettings, toolAccessCounts } from '@/app/automation/tool-access/settings/use'
 import { isTauri } from '@/app/tauri/env'
 import SettingsGroup from '@/components/settings/layout/SettingsGroup.vue'
-import SettingsLink from '@/components/settings/layout/SettingsLink.vue'
 import SettingsRow from '@/components/settings/layout/SettingsRow.vue'
 import SettingsSection from '@/components/settings/layout/SettingsSection.vue'
 import AppButton from '@/components/ui/button/AppButton.vue'
@@ -29,14 +27,12 @@ import AppAlert from '@/components/ui/feedback/AppAlert.vue'
 import AppStatus from '@/components/ui/feedback/AppStatus.vue'
 import AppCopyField from '@/components/ui/input/AppCopyField.vue'
 import AppSwitch from '@/components/ui/toggle/AppSwitch.vue'
-import { DESKTOP_DOWNLOAD_URL, MCP_SERVER_DOCS_URL } from '@/constants'
 
 import MCPFailureAlert from './MCPFailureAlert.vue'
 
 const automation = useAutomationMessages()
 const settings = useSettingsMessages()
 const common = useCommonMessages()
-const ai = useAIMessages()
 const available = localMCPAvailable()
 const restarting = computed(() => mcpRuntime.status === 'starting' || mcpRuntime.checking)
 const alertRestarts = computed(() =>
@@ -76,7 +72,6 @@ const serverSetup = useMCPServerSetup(() =>
     <template #title>{{ automation.localServer }}</template>
     <template #description>
       {{ automation.description }}
-      <SettingsLink :href="MCP_SERVER_DOCS_URL">{{ common.learnMore }}</SettingsLink>
     </template>
     <!-- While the alert offers Restart as its fix, it is the only Restart on the page. -->
     <template v-if="available && !alertRestarts" #actions>
@@ -90,11 +85,7 @@ const serverSetup = useMCPServerSetup(() =>
         {{ mcpRuntime.externallyManaged ? automation.externallyManaged : automation.restart }}
       </AppButton>
     </template>
-    <AppAlert v-if="!available" :heading="automation.localServerDesktopOnly">
-      <template #actions>
-        <SettingsLink :href="DESKTOP_DOWNLOAD_URL">{{ ai.aiSetupGetDesktop }}</SettingsLink>
-      </template>
-    </AppAlert>
+    <AppAlert v-if="!available" :heading="automation.localServerDesktopOnly" />
     <template v-else>
       <SettingsGroup data-slot="mcp-server-status">
         <SettingsRow>

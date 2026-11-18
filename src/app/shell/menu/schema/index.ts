@@ -1,7 +1,8 @@
 import { ARRANGE_MENU } from './arrange'
 import { EDIT_MENU } from './edit'
 import { FILE_MENU, SETTINGS_MENU_ITEM } from './file'
-import { HELP_MENU } from './help'
+// Help menu is hidden in the internal OpenFigma build.
+// import { HELP_MENU } from './help'
 import { OBJECT_MENU } from './object'
 import { TEXT_MENU } from './text'
 import type { AppMenuActionItem, AppMenuGroupSchema } from './types'
@@ -26,8 +27,9 @@ export const APP_MENU_SCHEMA = [
   VIEW_MENU,
   OBJECT_MENU,
   TEXT_MENU,
-  ARRANGE_MENU,
-  HELP_MENU
+  ARRANGE_MENU
+  // Help menu is hidden in the internal OpenFigma build.
+  // HELP_MENU
 ] satisfies AppMenuGroupSchema[]
 
 /**
